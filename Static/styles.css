@@ -1,0 +1,60 @@
+body{
+    background-color: #000000fc;
+    color:green;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+img{
+    width:100px;
+    height:100px;
+    margin:10px 0px 0px 0px;
+    align-items: center;
+}
+
+p{
+    text-align: center;
+    margin:2px 0px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.Administrative{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.Administrative a{
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.Staffing{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.Staffing a{
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.Staffing a img{
+  width: 100px;
+  height: 100px; 
+}
