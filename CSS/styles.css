@@ -54,7 +54,28 @@ h2{
     letter-spacing: 1px;
 }
 
-.Staffing a img{
-  width: 100px;
-  height: 100px; 
+.Webforms{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.Webforms a{
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.Training{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+}
+
+.Training a{
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
