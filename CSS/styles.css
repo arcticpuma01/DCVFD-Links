@@ -1,81 +1,119 @@
-body{
-    background-color: #000000fc;
-    color:green;
+body {
+    background: linear-gradient(to bottom, #000000fc, #333333); /* Gradient background */
+    color: green;
+    line-height: 1.6; /* Improve readability */
 }
 
-a{
+a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-img{
-    width:100px;
-    height:100px;
-    margin:10px 0px 0px 0px;
+img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0px 0px 0px;
     align-items: center;
 }
 
-p{
+p {
     text-align: center;
-    margin:2px 0px;
+    margin: 2px 0px;
 }
 
-h1{
+h1, h2 {
     text-align: center;
+    font-weight: bold;
+    font-size: 42px;
 }
 
-h2{
-    text-align: center;
-}
-
-.Administrative{
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content: space-around; /* Spread out grid items */
+    align-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Set a max-width for the container */
+    margin: auto; /* Center the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    animation: fadeIn 1s ease-in-out; /* Apply animation */
 }
 
-.Administrative a{
+.grid-item {
     border: 1px solid #ffffff;
+    border-radius: 10px;
     text-align: center;
     font-size: 24px;
     letter-spacing: 1px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.Staffing{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 10px;
+.grid-item:hover {
+    background-color: #ffffff33; /* Slightly lighter background on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
 }
 
-.Staffing a{
-    border: 1px solid #ffffff;
-    text-align: center;
-    font-size: 24px;
-    letter-spacing: 1px;
+.section {
+    margin-bottom: 20px;
 }
 
-.Webforms{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 10px;
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
 }
 
-.Webforms a{
-    border: 1px solid #ffffff;
-    text-align: center;
-    font-size: 24px;
-    letter-spacing: 1px;
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .grid-item {
+        font-size: 20px;
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+    }
 }
 
-.Training{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 10px;
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .grid-item {
+        font-size: 18px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
 }
 
-.Training a{
-    border: 1px solid #ffffff;
-    text-align: center;
-    font-size: 24px;
-    letter-spacing: 1px;
+@media (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on the smallest screens */
+    }
+
+    .grid-item {
+        font-size: 16px;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
